@@ -61,7 +61,7 @@ You can skip this annoying pause with the flag `-skipPause=true` : `go run main.
 
 The simulation will pause **2 seconds** between 2 states transition to display the current position and state of each elevator.
 
-To change this pause time, you can use the flag `-pauseTimeInSecsPtr=x`: `go run main.go -pauseTimeInSecsPtr=1 -skipPause=true`
+To change this pause time, you can use the flag `-pauseTimeInSecs=x`: `go run main.go -pauseTimeInSecs=1 -skipPause=true`
 
 
 

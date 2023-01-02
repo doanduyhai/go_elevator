@@ -9,7 +9,7 @@ import (
 
 func main() {
 
-	pauseTimeInSecsPtr := flag.Int("pauseTimeInSecsPtr", 2, "Pause time in seconds between 2 states transition")
+	pauseTimeInSecsPtr := flag.Int("pauseTimeInSecs", 2, "Pause time in seconds between 2 states transition")
 	skipPausePtr := flag.Bool("skipPause", false, "Skip the initial pause to read pictograms")
 	flag.Parse()
 
