@@ -135,13 +135,10 @@ func (c *Controller) Run() {
 
 	for true {
 
-		sortedElevators := stream.OfSlice(maps.Values(c.elevators)).
-			Sorted(sortElevatorsByIndex).ToSlice()
-
 		fmt.Println(c.display())
 
 		newElevator := map[int]Elevator{}
-		for index, v := range sortedElevators {
+		for index, v := range c.elevators {
 			newElevator[index] = v.nextState()
 		}
 		c.elevators = newElevator
