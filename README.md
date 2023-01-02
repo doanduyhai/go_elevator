@@ -10,7 +10,7 @@ The idea is to create an elevator system that dispatch orders to different eleva
 
 The complexity is to handle priorities between elevators and to code the display
 
-The core of the animation is based on a state-machine, which transition an elevator from one state to another state
+The core of the animation is based on a state-machine, which transitions an elevator from one state to another state
 
 The code should have unit tests to ensure there is no regression
 
