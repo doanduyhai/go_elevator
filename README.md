@@ -25,7 +25,7 @@ The V1 version implements the following:
   - **`UnloadingAtFloor`**: unloading people at **destination** floor
   - **`StopAtFloor`**: the elevator is stopped at a floor
 
-2. the main controller has un orders buffer, at each round, an order from the buffer is dispatched to the **appropriate** elevator. How **appropriate** is an elevator is defined by a complex distance computation for an elevator from its current position to reach the **source** floor to pick people
+2. the main controller has an orders buffer. At each round, an order from the buffer is dispatched to the **appropriate** elevator. How **appropriate** is an elevator is defined by a complex distance computation for an elevator from its current position to reach the **source** floor to pick people
 
 3. There is an ASCII display system to simulate the movements of elevators. We use the following pictograms
 
@@ -39,6 +39,12 @@ The V1 version implements the following:
   - |☺⟩ : elevator TRANSPORTING people moving UP
   - ⟨☺| : elevator TRANSPORTING people moving DOWN
   - x->y: an ORDER to take people from floor 'x' to floor 'y'
+
+An example of a display is:
+
+`1 [1->3](MovingEmptyTo)       :|⋅⟩1☹1 _ ❲3❳` 
+	
+This means that	elevator n°1, with current order Floor 1 to Floor 3 ([1->3]), current state: (MovingEmptyTo), is moving Up from Floor 0 to reach floor 1 where people are **waiting to be picked**. The target destination floor is Floor 3
 
 # III Execute unit tests
 
