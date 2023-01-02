@@ -150,5 +150,11 @@ func (c *Controller) Run() {
 
 		time.Sleep(time.Duration(c.pauseTimeInSecs) * time.Second)
 
+		if len(c.ordersBuffer) == 0 && stream.OfSlice(maps.Values(c.elevators)).AllMatch(Elevator.isReadyForNewOrder) {
+			break
+		}
 	}
+
+	fmt.Printf("\n\n**************** End of Simulation *******************\n\n")
 }
+
